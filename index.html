@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Интерактивная кинематографическая презентация о стали: состав, получение, свойства и применение.">
+  <title>Сталь — материал, на котором держится мир</title>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1557592494-37448a3f4b11?auto=format&fit=crop&w=2200&q=82">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="brand"><span class="brand-mark"></span><span>МАТЕРИАЛЬНАЯ ФИЗИКА</span></div>
+    <button class="replay-button" id="replayButton" aria-label="Повторить анимацию текущего слайда">↻ <span>ПОВТОРИТЬ СЦЕНУ</span></button>
+    <div class="chapter" id="chapterLabel">01 / 10 <span>СТАЛЬ</span></div>
+    <div class="top-rule"><span id="progressBar"></span></div>
+  </header>
+
+  <main class="deck" id="deck" aria-live="off">
+    <section class="slide scene-title is-active" data-title="СТАЛЬ" aria-label="Слайд 1. Сталь">
+      <div class="scene-backdrop"><img class="photo" src="https://images.unsplash.com/photo-1557592494-37448a3f4b11?auto=format&fit=crop&w=2200&q=82" alt="Раскалённая сталь в металлургическом цехе" fetchpriority="high"></div>
+      <div class="title-beam" aria-hidden="true"></div>
+      <div class="title-copy">
+        <p class="eyebrow reveal">СПЛАВЫ / СТАЛЬ</p>
+        <h1 class="hero-title reveal">СТАЛЬ<span class="title-period">.</span></h1>
+        <p class="hero-subtitle reveal">МАТЕРИАЛ,<br>НА КОТОРОМ<br><strong>ДЕРЖИТСЯ МИР.</strong></p>
+        <div class="presenters reveal"><span>АЛИШЕР</span><i></i><span>ЖАНИБЕК</span><em>9 КЛАСС</em></div>
+      </div>
+      <div class="title-caption reveal"><span>МАТЕРИАЛЬНАЯ КУЛЬТУРА</span><span>01 — 10</span></div>
+      <div class="hero-orbit" aria-hidden="true"><span>Fe</span><span>C</span><span>Cr</span></div>
+    </section>
+
+    <section class="slide scene-alloy" data-title="ЗАЧЕМ СМЕШИВАТЬ?" aria-label="Слайд 2. Сплавы">
+      <div class="section-meta reveal"><span>01 / МАТЕРИАЛ</span><span>ОТ СОСТАВА — К СВОЙСТВАМ</span></div>
+      <div class="alloy-layout">
+        <div class="alloy-copy">
+          <p class="eyebrow reveal">СПЛАВЫ</p>
+          <h2 class="display-title reveal">ЗАЧЕМ<br>СМЕШИВАТЬ<br><span>МЕТАЛЛЫ?</span></h2>
+          <p class="body-lead reveal">Чтобы получить материал<br>с нужным характером.</p>
+          <p class="small-copy reveal">Добавляя другие элементы, можно менять прочность, твёрдость, пластичность и стойкость к коррозии.</p>
+        </div>
+        <div class="alloy-visual reveal" aria-label="Схема сплава">
+          <div class="mix-orbit orbit-one"></div><div class="mix-orbit orbit-two"></div>
+          <div class="mix-core"><span>Fe</span><small>ОСНОВА</small></div>
+          <button class="mix-particle particle-c" data-element="C" aria-label="Углерод">C</button>
+          <button class="mix-particle particle-cr" data-element="Cr" aria-label="Хром">Cr</button>
+          <button class="mix-particle particle-ni" data-element="Ni" aria-label="Никель">Ni</button>
+          <div class="mix-label">СОСТАВ → СВОЙСТВА</div>
+          <div class="mix-caption" id="mixCaption">Несколько элементов — один новый материал</div>
+        </div>
+      </div>
+      <div class="slide-foot"><span>СПЛАВ = ОСНОВА + ДОБАВКИ</span><span>КАСНИТЕСЬ ЭЛЕМЕНТОВ</span></div>
+    </section>
+
+    <section class="slide scene-definition" data-title="НЕ ПРОСТО ЖЕЛЕЗО" aria-label="Слайд 3. Что такое сталь">
+      <div class="definition-image scene-backdrop"><img class="photo" src="https://images.unsplash.com/photo-1557592494-37448a3f4b11?auto=format&fit=crop&w=2000&q=78" alt="Текстура раскалённого металла в цехе" loading="lazy"></div>
+      <div class="section-meta reveal"><span>02 / ОПРЕДЕЛЕНИЕ</span><span>ЖЕЛЕЗО + УГЛЕРОД</span></div>
+      <div class="definition-main">
+        <div class="definition-heading">
+          <p class="eyebrow reveal">ЧТО ТАКОЕ СТАЛЬ?</p>
+          <h2 class="display-title reveal">НЕ ПРОСТО<br><span>ЖЕЛЕЗО.</span></h2>
+        </div>
+        <div class="formula-stage reveal">
+          <div class="formula-iron">Fe</div><div class="formula-plus">+</div><div class="formula-carbon">C</div>
+          <div class="lattice" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="formula-line"></div>
+          <div class="formula-result">СТАЛЬ</div>
+          <p class="formula-note">Железо — основа. Углерод и другие элементы помогают настроить свойства.</p>
+        </div>
+      </div>
+      <div class="definition-ribbon reveal"><strong>до 2%</strong><span>углерода в стали<br><small>в большинстве сталей — значительно меньше</small></span></div>
+      <div class="slide-foot"><span>СТАЛЬ — СПЛАВ НА ОСНОВЕ ЖЕЛЕЗА</span><span>СОСТАВ ИМЕЕТ ЗНАЧЕНИЕ</span></div>
+    </section>
+
+    <section class="slide scene-composition" data-title="ФОРМУЛА СТАЛИ" aria-label="Слайд 4. Состав стали">
+      <div class="section-meta reveal"><span>03 / СОСТАВ</span><span>ЭЛЕМЕНТЫ ВЛИЯЮТ НА ХАРАКТЕР</span></div>
+      <div class="composition-head">
+        <p class="eyebrow reveal">НЕ ОДНА ФОРМУЛА — МНОГО ВОЗМОЖНОСТЕЙ</p>
+        <h2 class="display-title reveal">ФОРМУЛА<br><span>СТАЛИ.</span></h2>
+      </div>
+      <div class="element-system reveal">
+        <div class="element-list" role="group" aria-label="Элементы состава стали">
+          <button class="element-row is-selected" data-symbol="Fe" data-name="ЖЕЛЕЗО" data-copy="Основа большинства сталей. Именно железная часть задаёт материалу его металлургический характер."><b>Fe</b><span>ЖЕЛЕЗО</span><i>ОСНОВА</i></button>
+          <button class="element-row" data-symbol="C" data-name="УГЛЕРОД" data-copy="Даже небольшое изменение доли углерода заметно влияет на твёрдость, прочность и пластичность стали."><b>C</b><span>УГЛЕРОД</span><i>НАСТРАИВАЕТ</i></button>
+          <button class="element-row" data-symbol="Cr" data-name="ХРОМ" data-copy="В подходящем количестве хром помогает стали сопротивляться коррозии: на поверхности формируется тонкий защитный слой."><b>Cr</b><span>ХРОМ</span><i>ЗАЩИЩАЕТ</i></button>
+          <button class="element-row" data-symbol="Ni" data-name="НИКЕЛЬ" data-copy="Никель меняет свойства стали и используется в разных легированных и нержавеющих составах."><b>Ni</b><span>НИКЕЛЬ</span><i>ИЗМЕНЯЕТ</i></button>
+        </div>
+        <div class="element-readout" aria-live="polite">
+          <div class="readout-symbol" id="readoutSymbol">Fe</div>
+          <div class="readout-index">ЭЛЕМЕНТ / 01—04</div>
+          <h3 id="readoutName">ЖЕЛЕЗО</h3>
+          <p id="readoutCopy">Основа большинства сталей. Именно железная часть задаёт материалу его металлургический характер.</p>
+          <div class="readout-scale"><span>СОСТАВ</span><span>СВОЙСТВА</span><b></b></div>
+        </div>
+      </div>
+      <div class="slide-foot"><span>КАСАНИЕ МЕНЯЕТ СОСТАВ</span><span>Cr — В ПОДХОДЯЩЕМ СОСТАВЕ</span></div>
+    </section>
+
+    <section class="slide scene-process" data-title="ОТ СЫРЬЯ ДО СТАЛИ" aria-label="Слайд 5. Получение стали">
+      <div class="process-photo scene-backdrop"><img class="photo" src="https://images.unsplash.com/photo-1557592494-37448a3f4b11?auto=format&fit=crop&w=1800&q=76" alt="Металлургический процесс" loading="lazy"></div>
+      <div class="section-meta reveal"><span>04 / ПОЛУЧЕНИЕ</span><span>ОТ СЫРЬЯ К ГОТОВОМУ МАТЕРИАЛУ</span></div>
+      <div class="process-title">
+        <p class="eyebrow reveal">ПЯТЬ ШАГОВ ПРЕОБРАЗОВАНИЯ</p>
+        <h2 class="display-title reveal">ОТ СЫРЬЯ<br><span>ДО СТАЛИ.</span></h2>
+      </div>
+      <div class="process-track" id="processTrack">
+        <div class="process-line"><span id="processLine"></span></div>
+        <button class="process-stage is-current" data-step="0"><b>01</b><strong>РУДА<br>И УГОЛЬ</strong><small>сырьё</small></button>
+        <button class="process-stage" data-step="1"><b>02</b><strong>ЧУГУН</strong><small>железо с углеродом</small></button>
+        <button class="process-stage" data-step="2"><b>03</b><strong>ПЕРЕРАБОТКА</strong><small>удаление примесей</small></button>
+        <button class="process-stage" data-step="3"><b>04</b><strong>НАСТРОЙКА<br>СОСТАВА</strong><small>легирующие элементы</small></button>
+        <button class="process-stage" data-step="4"><b>05</b><strong>СТАЛЬ</strong><small>литьё и прокат</small></button>
+      </div>
+      <div class="process-bottom"><p class="process-note" id="processNote">Схема показывает один распространённый путь. Есть и электродуговой способ: в нём плавят металлолом.</p><button class="text-action" id="processNext">ПОКАЗАТЬ ПУТЬ <span>↗</span></button></div>
+      <div class="slide-foot"><span>СХЕМА УПРОЩЕНА</span><span>КИСЛОРОДНЫЙ И ЭЛЕКТРОДУГОВОЙ МАРШРУТЫ</span></div>
+    </section>
+
+    <section class="slide scene-properties" data-title="ХАРАКТЕР МАТЕРИАЛА" aria-label="Слайд 6. Свойства стали">
+      <div class="section-meta reveal"><span>05 / СВОЙСТВА</span><span>СВОЙСТВА ЗАВИСЯТ ОТ СОСТАВА И ОБРАБОТКИ</span></div>
+      <div class="properties-heading">
+        <p class="eyebrow reveal">НЕ ОДНА СТАЛЬ — МНОГО БАЛАНСОВ</p>
+        <h2 class="display-title reveal">ПОЧЕМУ ОНА<br><span>ТАКАЯ СИЛЬНАЯ?</span></h2>
+      </div>
+      <div class="property-composition">
+        <article class="property-panel reveal"><div class="property-art strength-art"><span class="ring ring-a"></span><span class="ring ring-b"></span><b>01</b></div><h3>ПРОЧНОСТЬ</h3><p>Выдерживает большие нагрузки — поэтому из стали собирают каркасы и мосты.</p></article>
+        <article class="property-panel reveal"><div class="property-art hardness-art"><span class="diamond"></span><b>02</b></div><h3>ТВЁРДОСТЬ</h3><p>Некоторые марки сопротивляются царапинам и износу дольше других.</p></article>
+        <article class="property-panel reveal"><div class="property-art ductile-art"><span class="wave"></span><b>03</b></div><h3>ПЛАСТИЧНОСТЬ</h3><p>При обработке сталь можно прокатывать, гнуть и придавать ей нужную форму.</p></article>
+        <article class="property-panel reveal"><div class="property-art durable-art"><span class="spark"></span><b>04</b></div><h3>ДОЛГОВЕЧНОСТЬ</h3><p>Правильно выбранная марка и защита помогают конструкции служить долго.</p></article>
+      </div>
+      <div class="property-caveat reveal"><span class="orange-dot"></span>Свойства всегда зависят от конкретной марки и условий работы.</div>
+      <div class="slide-foot"><span>СВОЙСТВО — РЕЗУЛЬТАТ ИНЖЕНЕРНОГО ВЫБОРА</span><span>05 / 10</span></div>
+    </section>
+
+    <section class="slide scene-significance" data-title="СТАЛЬ ИЗМЕНИЛА МИР" aria-label="Слайд 7. Значение стали">
+      <div class="city-image scene-backdrop"><img class="photo" src="https://images.unsplash.com/photo-1642012614387-272c9aec3301?auto=format&fit=crop&w=2200&q=82" alt="Ночной силуэт современных зданий" loading="lazy"></div>
+      <div class="section-meta reveal"><span>06 / ЗНАЧЕНИЕ</span><span>МАТЕРИАЛ ЦЕЛОЙ ЦИВИЛИЗАЦИИ</span></div>
+      <div class="significance-copy">
+        <p class="eyebrow reveal">СТАЛЬ — ЭТО ИНФРАСТРУКТУРА</p>
+        <h2 class="display-title reveal">СТАЛЬ<br><span>ИЗМЕНИЛА<br>МИР.</span></h2>
+        <p class="significance-line reveal">От мостов и поездов<br>до заводов и городов.</p>
+      </div>
+      <div class="steel-stat reveal"><strong>52<span>%</span></strong><p>мирового использования стали приходится на здания и инфраструктуру</p><small>WORLD STEEL IN FIGURES · 2025</small></div>
+      <div class="sector-rail reveal"><span>СТРОИТЕЛЬСТВО</span><i></i><span>ТРАНСПОРТ</span><i></i><span>ПРОМЫШЛЕННОСТЬ</span><i></i><span>ТЕХНОЛОГИИ</span></div>
+      <div class="slide-foot"><span>СТАЛЬ — ОСНОВА СОВРЕМЕННОЙ ИНЖЕНЕРИИ</span><span>МИРОВОЙ ПОКАЗАТЕЛЬ, 2024</span></div>
+    </section>
+
+    <section class="slide scene-everywhere" data-title="ОНА ВЕЗДЕ" aria-label="Слайд 8. Применение стали">
+      <div class="section-meta reveal"><span>07 / ПРИМЕНЕНИЕ</span><span>ПОСМОТРИТЕ ВОКРУГ</span></div>
+      <div class="everywhere-heading">
+        <p class="eyebrow reveal">ПРИМЕНЕНИЕ</p>
+        <h2 class="display-title reveal">ОНА<br><span>ВЕЗДЕ.</span></h2>
+      </div>
+      <div class="use-collage">
+        <figure class="use-frame frame-city reveal"><img class="photo" src="https://images.unsplash.com/photo-1642012614387-272c9aec3301?auto=format&fit=crop&w=1200&q=78" alt="Городские здания"><figcaption>ГОРОДА <i>01</i></figcaption></figure>
+        <figure class="use-frame frame-bridge reveal"><img class="photo" src="https://burst.shopifycdn.com/photos/metal-bridge-angled-beams.jpg?width=1400" alt="Стальные балки моста" loading="lazy"><figcaption>МОСТЫ <i>02</i></figcaption></figure>
+        <figure class="use-frame frame-rail reveal"><img class="photo" src="https://images.unsplash.com/photo-1588127727253-e5f2faf4f541?auto=format&fit=crop&w=1200&q=78" alt="Железнодорожные рельсы" loading="lazy"><figcaption>ЖЕЛЕЗНЫЕ ДОРОГИ <i>03</i></figcaption></figure>
+        <figure class="use-frame frame-steel reveal"><img class="photo" src="https://images.unsplash.com/photo-1557592494-37448a3f4b11?auto=format&fit=crop&w=1200&q=78" alt="Сталь в металлургическом производстве" loading="lazy"><figcaption>ПРОИЗВОДСТВО <i>04</i></figcaption></figure>
+      </div>
+      <p class="everywhere-note reveal">Автомобили · инструменты · техника · оборудование</p>
+      <div class="slide-foot"><span>МЫ ПОЛЬЗУЕМСЯ СТАЛЬЮ КАЖДЫЙ ДЕНЬ</span><span>08 / 10</span></div>
+    </section>
+
+    <section class="slide scene-grades" data-title="РАЗНЫЕ МАРКИ — РАЗНЫЕ ЗАДАЧИ" aria-label="Слайд 9. Виды стали">
+      <div class="section-meta reveal"><span>08 / ВИДЫ СТАЛИ</span><span>ИНЖЕНЕРИЯ ВЫБИРАЕТ ТОЧНО</span></div>
+      <div class="grades-heading">
+        <p class="eyebrow reveal">СОСТАВ ПОД ЗАДАЧУ</p>
+        <h2 class="display-title reveal">РАЗНАЯ СТАЛЬ —<br><span>РАЗНЫЕ ВОЗМОЖНОСТИ.</span></h2>
+      </div>
+      <div class="grade-layout">
+        <div class="grade-picker" role="tablist" aria-label="Типы стали">
+          <button class="grade-tab is-selected" role="tab" aria-selected="true" data-grade="stainless"><span>01</span><b>НЕРЖАВЕЮЩАЯ</b><i>ХРОМ + ЗАЩИТНЫЙ СЛОЙ</i></button>
+          <button class="grade-tab" role="tab" aria-selected="false" data-grade="tool"><span>02</span><b>ИНСТРУМЕНТАЛЬНАЯ</b><i>ИЗНОСОСТОЙКОСТЬ</i></button>
+          <button class="grade-tab" role="tab" aria-selected="false" data-grade="alloy"><span>03</span><b>ЛЕГИРОВАННАЯ</b><i>ЭЛЕМЕНТЫ ДЛЯ ЗАДАЧИ</i></button>
+        </div>
+        <div class="grade-feature" aria-live="polite">
+          <div class="grade-ghost" id="gradeGhost">Cr</div>
+          <span class="grade-kicker" id="gradeKicker">ФАКТ 01 / КОРРОЗИЯ</span>
+          <h3 id="gradeTitle">Хром защищает поверхность</h3>
+          <p id="gradeText">В нержавеющей стали хром помогает образовать тонкий пассивный слой. Для классификации stainless steel часто используют ориентир от 10,5% хрома.</p>
+          <div class="grade-fact-count"><span id="gradeCount">01</span><i></i><span>03</span></div>
+        </div>
+      </div>
+      <div class="grade-footnote reveal">ФАКТ: электродуговая печь может использовать до 100% стального лома.</div>
+      <div class="slide-foot"><span>КАСАНИЕ — СЛЕДУЮЩИЙ ФАКТ</span><span>09 / 10</span></div>
+    </section>
+
+    <section class="slide scene-finale" data-title="СТАЛЬ ДЕРЖИТ МИР" aria-label="Слайд 10. Финал">
+      <div class="final-image scene-backdrop"><img class="photo" src="https://images.unsplash.com/photo-1642012614387-272c9aec3301?auto=format&fit=crop&w=2200&q=82" alt="Город в вечернем свете" loading="lazy"></div>
+      <div class="final-glow" aria-hidden="true"></div>
+      <div class="section-meta reveal"><span>09 / ИТОГ</span><span>МАТЕРИАЛ, КОТОРЫЙ МЫ НЕ ЗАМЕЧАЕМ</span></div>
+      <div class="final-copy">
+        <p class="eyebrow reveal">МЫ МОЖЕМ НЕ ЗАМЕЧАТЬ СТАЛЬ.</p>
+        <h2 class="final-quote reveal">Но без неё<br>мир, в котором<br>мы живём,<br><strong>был бы<br>совершенно другим.</strong></h2>
+        <div class="final-signature reveal"><span>АЛИШЕР <i>•</i> ЖАНИБЕК</span><span>СПАСИБО ЗА ВНИМАНИЕ</span></div>
+      </div>
+      <div class="final-mark" aria-hidden="true">Fe</div>
+      <div class="slide-foot"><span>СПЛАВЫ. СТАЛЬ.</span><span>10 / 10</span></div>
+    </section>
+  </main>
+
+  <button class="edge-zone edge-left" id="edgePrevious" aria-label="Предыдущий слайд"><span>←</span></button>
+  <button class="edge-zone edge-right" id="edgeNext" aria-label="Следующий слайд"><span>→</span></button>
+
+  <nav class="control-dock" id="controlDock" aria-label="Управление презентацией">
+    <button class="control-button nav-button" id="previousButton" aria-label="Назад"><span>←</span><b>НАЗАД</b></button>
+    <div class="dock-progress"><span id="slideCounter">01 <i>/</i> 10</span><div class="dock-track"><span id="dockProgress"></span></div></div>
+    <button class="control-button notes-button" id="notesButton" aria-label="Открыть заметки докладчика"><span class="notes-glyph">≡</span><b>ЗАМЕТКИ</b></button>
+    <button class="control-button fullscreen-button" id="fullscreenButton" aria-label="Включить полноэкранный режим"><span>⛶</span><b>ЭКРАН</b></button>
+    <button class="control-button hide-button" id="hideControlsButton" aria-label="Скрыть панель управления"><span>⌄</span><b>СКРЫТЬ</b></button>
+    <button class="control-button nav-button next-button" id="nextButton" aria-label="Далее"><b>ДАЛЕЕ</b><span>→</span></button>
+  </nav>
+  <button class="show-controls" id="showControlsButton" aria-label="Показать панель управления">⌃</button>
+
+  <aside class="notes-panel" id="notesPanel" aria-hidden="true" aria-labelledby="notesHeading">
+    <div class="notes-top"><div><p class="eyebrow">ЗАМЕТКИ ДОКЛАДЧИКА</p><h2 id="notesHeading">СЛАЙД 01 / 10</h2></div><button class="notes-close" id="notesClose" aria-label="Закрыть заметки">×</button></div>
+    <div class="notes-speaker" id="notesSpeaker">АЛИШЕР <span>· 00:40</span></div>
+    <p class="notes-text" id="notesText"></p>
+    <div class="notes-transition"><span>ПЕРЕХОД</span><p id="notesTransition"></p></div>
+    <p class="notes-hint">Заметки скрыты от зрителей, пока панель не открыта. Закрыть — одним касанием.</p>
+  </aside>
+  <div class="notes-scrim" id="notesScrim"></div>
+  <div class="sr-only" id="slideAnnouncement" aria-live="polite"></div>
+</body>
+</html>
